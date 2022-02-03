@@ -1,0 +1,39 @@
+1. Studenti nati nel 1990 :
+SELECT * 
+FROM students 
+WHERE date_of_birth 
+LIKE '%1990%';
+
+2. Corsi con più di 10 CFU :
+SELECT * 
+FROM courses 
+WHERE cfu > 10;
+
+3. Studenti con più di 30 anni : 
+SELECT * 
+FROM students 
+WHERE YEAR(`date_of_birth`) < 1992;
+
+4. Corsi I sem I anno :
+SELECT * 
+FROM courses 
+WHERE period = 'I semestre' and year = 1;
+
+5. Appelli dopo le 14 del 20/07/2020 :
+SELECT * 
+FROM exams 
+WHERE hour > '14%' and date = '2020-06-20';
+
+6. Corsi di laurea magistrale :
+SELECT * 
+FROM degrees 
+WHERE level = 'magistrale';
+
+7. Dipartimenti :
+SELECT COUNT(`id`) as departments 
+FROM departments;
+
+8. Professori senza numero di telefono :
+SELECT COUNT(`id`) as whithout 
+FROM teachers 
+WHERE phone IS NULL;
