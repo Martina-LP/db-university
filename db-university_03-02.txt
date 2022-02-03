@@ -19,7 +19,7 @@ SELECT *
 FROM courses 
 WHERE period = 'I semestre' and year = 1;
 
-5. Appelli dopo le 14 del 20/07/2020 :
+5. Appelli dopo le 14 del 20/06/2020 :
 SELECT * 
 FROM exams 
 WHERE hour > '14%' and date = '2020-06-20';
