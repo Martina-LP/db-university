@@ -1,0 +1,20 @@
+1. Quanti iscritti ogni anno :
+SELECT COUNT(`id`) as n_students, 
+YEAR(`enrolment_date`) as year_list 
+FROM `students` 
+GROUP BY YEAR(`enrolment_date`);
+
+2. Insegnanti con ufficio nello stesso edificio :
+SELECT COUNT(`id`) as n_teachers, `office_address` 
+FROM `teachers` 
+GROUP BY `office_address`;
+
+3. Media dei voti di ogni appello d'esame :
+SELECT AVG(`vote`) as GPA, `exam_id` 
+FROM `exam_student` 
+GROUP BY `exam_id`;
+
+4. Corsi di laurea per ogni dipartimento :
+SELECT COUNT(`id`) as n_degrees, `department_id` 
+FROM `degrees` 
+GROUP BY `department_id`;
